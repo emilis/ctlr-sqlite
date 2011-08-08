@@ -4,13 +4,15 @@ _Cheap Tricks Library for RingoJS - Sqlite package_
 
 ## Usage
 
-    var sqlite = require("ctlr-sqlite");
-    sqlite.connect("/path/to/file.sqlite");
-    
-    var one_value = sqlite.get_one("select id from table limit 0,1");
-    var rows = sqlite.get_all("select * from table");
+```JavaScript
+var sqlite = require("ctlr-sqlite");
+sqlite.connect("/path/to/file.sqlite");
 
-    var id = sqlite.prepared_query("insert into ? (?,?) values(?,?)", ["table", "name", "email", "User", "user@example.org"]);
+var one_value = sqlite.get_one("select id from table limit 0,1");
+var rows = sqlite.get_all("select * from table");
+
+var id = sqlite.prepared_query("insert into ? (?,?) values(?,?)", ["table", "name", "email", "User", "user@example.org"]);
+```
 
 ### API summary
 
@@ -56,7 +58,7 @@ _Cheap Tricks Library for RingoJS - Sqlite package_
 
 This is free software, and you are welcome to redistribute it under certain conditions; see LICENSE.txt for details.
 
-## Credits
+## Thanks 
 
 - John Lim for his <a href="http://adodb.sourceforge.net/">ADOdb Database Abstraction Library for PHP</a> (an inspiration for this package).
 - David Crawshaw for <a href="http://www.zentus.com/sqlitejdbc/">SQLite JDBC Driver</a>.
