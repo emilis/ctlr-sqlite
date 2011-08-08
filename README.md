@@ -4,6 +4,8 @@ Sqlite module for RingoJS with API similar to ADOdb for PHP.
 
 ## Usage
 
+### Example
+
 ```javascript
 var sqlite = require("ctlr-sqlite");
 sqlite.connect("/path/to/file.sqlite");
@@ -50,19 +52,21 @@ var id = sqlite.prepared_query("insert into ? (?,?) values(?,?)", ["table", "nam
         </td><td>Retrieves the first column value from the first row.</td></tr>
 </tbody></table>
 
-## Requirements
+### Requirements
 
 - RingoJS v0.8
 
-## License
+## About
+
+### License
 
 This is free software, and you are welcome to redistribute it under certain conditions; see LICENSE.txt for details.
 
-## Thanks 
+### Thanks 
 
 - John Lim for his <a href="http://adodb.sourceforge.net/">ADOdb Database Abstraction Library for PHP</a> (an inspiration for this package).
 - David Crawshaw for <a href="http://www.zentus.com/sqlitejdbc/">SQLite JDBC Driver</a>.
 
-## Contact
+### Author contact
 
 Emilis Dambauskas <emilis.d@gmail.com>, <http://emilis.github.com/>
