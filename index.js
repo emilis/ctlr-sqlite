@@ -1,20 +1,20 @@
 /*
     Copyright 2010,2011 Emilis Dambauskas
 
-    This file is part of Ctlr-sqlite package.
+    This file is part of CTLR-Sqlite package.
 
-    Ctlr-sqlite is free software: you can redistribute it and/or modify
+    CTLR-Sqlite is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    Ctlr-sqlite is distributed in the hope that it will be useful,
+    CTLR-Sqlite is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Ctlr-sqlite.  If not, see <http://www.gnu.org/licenses/>.
+    along with CTLR-Sqlite.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 /**
