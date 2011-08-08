@@ -21,7 +21,7 @@ var id = sqlite.prepared_query("insert into ? (?,?) values(?,?)", ["table", "nam
 <table><tbody>
 <tr><td align="right"><a href="http://download.oracle.com/javase/6/docs/api/java/sql/Connection.html">Connection</a></td>
     <td><b>connect</b>( file_name )</td>
-    <td>Connects to the Sqlite database stored in the file.</td></tr>
+    <td>Connects to the database stored in the file.</td></tr>
 <tr><td align="right">Boolean</td>
     <td><b>close</b>( [Connection] )</td>
     <td>Close a connection to a database.</td></tr>
@@ -33,7 +33,7 @@ var id = sqlite.prepared_query("insert into ? (?,?) values(?,?)", ["table", "nam
     <td>Executes the sql query.</td></tr>
 <tr><td align="right">ResultSet / Number</td>
     <td><b>prepared_query</b>( sql, parameters[], [Connection] )</td>
-    <td>Runs the sql query with provided parameters.</td></tr>
+    <td>Executes the sql query with provided parameters.</td></tr>
 <tr><td align="right">Array</td>
     <td><b>get_row</b>( sql/ResultSet )</td>
     <td>Retrieves one row.</td></tr>
@@ -42,7 +42,7 @@ var id = sqlite.prepared_query("insert into ? (?,?) values(?,?)", ["table", "nam
     <td>Retrieves all rows.</td></tr>
 <tr><td align="right"><a href="https://developer.mozilla.org/en/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators">Generator</a></td>
     <td><b>get_iterator</b>( sql/ResultSet )</td>
-    <td>Returns a <em>generator</em> on all rows.
+    <td>Returns a <em>Generator</em> on all rows.
         <br><em>Note: due to Sqlite recommendation to close all resultsets ASAP for better performance this is just a wrapper around <em>get_all()</em>.</td></tr>
 <tr><td align="right">Array</td>
     <td><b>get_col</b>( sql/ResultSet, [column=1] )</td>
