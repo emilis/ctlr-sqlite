@@ -1,10 +1,10 @@
-# CTLR Sqlite
+# Ctlr-Sqlite
 
-_Cheap Tricks Library for RingoJS - Sqlite package_
+Sqlite module for RingoJS with API similar to ADOdb for PHP.
 
 ## Usage
 
-```JavaScript
+```javascript
 var sqlite = require("ctlr-sqlite");
 sqlite.connect("/path/to/file.sqlite");
 
