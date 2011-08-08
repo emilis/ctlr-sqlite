@@ -12,42 +12,40 @@ _Cheap Tricks Library for RingoJS - Sqlite package_
 
     var id = sqlite.prepared_query("insert into ? (?,?) values(?,?)", ["table", "name", "email", "User", "user@example.org"]);
 
-### API
+### API summary
 
 <table><tbody>
-<tr><td valign="top"><b>connect</b></td>
-    <td>(file_name)
-        <br>Connects to the Sqlite database stored in the file. Returns a <a href="http://download.oracle.com/javase/6/docs/api/java/sql/Connection.html">Connection</a> object.</td></tr>
-<tr><td valign="top"><b>close</b></td>
-    <td>([Connection])
-        <br>Close a connection to a database (provided by <tt>Connection</tt> or the last opened Connection).</td></tr>
-<tr><td valign="top"><b>getConnection</b></td>
-    <td>([Connection])
+<tr><td valign="top" align="right"><a href="http://download.oracle.com/javase/6/docs/api/java/sql/Connection.html">Connection</a></td>
+    <td><b>connect</b>(file_name)
+        <br>Connects to the Sqlite database stored in the file.</td></tr>
+<tr><td valign="top" align="right">Boolean</td>
+    <td><b>close</b>([Connection])
+        <br>Close a connection to a database.</td></tr>
+<tr><td valign="top" align="right">Connection</td>
+    <td><b>getConnection</b>([Connection])
         <br>Returns the last opened Connection or the provided Connection.</td></tr>
-<tr><td valign="top"><b>query</b></td>
-    <td><b>(sql, [Connection])</b>
-        <br>Runs the <tt>sql</tt> query and returns a <a href="http://download.oracle.com/javase/6/docs/api/java/sql/ResultSet.html">ResultSet</a>/affected-rows-count/last-insert-id on success.</td></tr>
-<tr><td valign="top"><b>prepared_query</b></td>
-    <td><code>(sql, parameters[], [Connection])</code>
-        <br>Runs the <tt>sql</tt> query with provided <tt>parameters</tt> Array and retuns a ResultSet/affected-rows-count/last-insert-id on success.</td></tr>
-<tr><td valign="top"><b>get_row</b></td>
-    <td>(sql/ResultSet)
-        <br>Retrieves one row from the given <tt>ResultSet</tt> or a ResultSet built with the given <tt>sql</tt> query.</td></tr>
-<tr><td valign="top"><b>get_all</b></td>
-    <td>(sql/ResultSet)
-        <br>Retrieves an Array of all rows from the given <tt>ResultSet</tt> or a ResultSet built with the given <tt>sql</tt> query.</td></tr>
-<tr><td valign="top"><b>get_iterator</b></td>
-    <td>(sql/ResultSet)
-        <br>Returns a <em>generator</em> on all rows from the given <tt>ResultSet</tt> or a ResultSet built with the given <tt>sql</tt> query.
+<tr><td valign="top" align="right"><a href="http://download.oracle.com/javase/6/docs/api/java/sql/ResultSet.html">ResultSet</a> / Number</td>
+    <td><b>query</b>(sql, [Connection])
+        <br>Executes the sql query.</td></tr>
+<tr><td valign="top" align="right">ResultSet / Number</td>
+    <td><b>prepared_query</b>(sql, parameters[], [Connection])
+        <br>Runs the sql query with provided parameters.</td></tr>
+<tr><td valign="top" align="right">Array</td>
+    <td><b>get_row</b>(sql/ResultSet)
+        <br>Retrieves one row.</td></tr>
+<tr><td valign="top" align="right">Array</td>
+    <td><b>get_all</b>(sql/ResultSet)
+        <br>Retrieves all rows.</td></tr>
+<tr><td valign="top" align="right"><a href="https://developer.mozilla.org/en/JavaScript/Guide/Iterators_and_Generators#Generators.3a_a_better_way_to_build_Iterators">Generator</a></td>
+    <td><b>get_iterator</b>(sql/ResultSet)
+        <br>Returns a <em>generator</em> on all rows.
         <br><em>Note: due to Sqlite recommendation to close all resultsets ASAP for better performance this is just a wrapper around <em>get_all()</em>.</td></tr>
-<tr><td valign="top"><b>get_col</b></td>
-    <td><!--(sql/ResultSet, [column=1])<br>-->
-        Retrieves an Array of all values in one column. Params:<!-- from the given <tt>ResultSet</tt> or a ResultSet built with the given <tt>sql</tt> query.-->
-        <ul><li><tt>sql/ResultSet</tt> - ResultSet or an SQL query String;</li>
-            <li><tt>[column=1]</tt> - Optional column number (starts from 1).</li></ul></td></tr>
-<tr><td valign="top"><b>get_one</b></td>
-    <td>(sql/ResultSet)
-        <br>Restrieves the first value in the first row from the given <tt>ResultSet</tt> or a ResultSet build with the given <tt>sql</tt> query.</td></tr>
+<tr><td valign="top" align="right">Array</td>
+    <td><b>get_col</b>(sql/ResultSet, [column=1])
+        <br>Retrieves all values of one column.</td></tr>
+<tr><td valign="top" align="right">mixed</td>
+    <td><b>get_one</b>(sql/ResultSet)
+        <br>Restrieves the first column value from the first row.</td></tr>
 </tbody></table>
 
 ## Requirements
