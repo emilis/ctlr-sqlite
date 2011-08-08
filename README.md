@@ -25,10 +25,10 @@ _Cheap Tricks Library for RingoJS - Sqlite package_
     <td>([Connection])
         <br>Returns the last opened Connection or the provided Connection.</td></tr>
 <tr><td valign="top"><b>query</b></td>
-    <td>(sql, [Connection])
+    <td><b>(sql, [Connection])</b>
         <br>Runs the <tt>sql</tt> query and returns a <a href="http://download.oracle.com/javase/6/docs/api/java/sql/ResultSet.html">ResultSet</a>/affected-rows-count/last-insert-id on success.</td></tr>
 <tr><td valign="top"><b>prepared_query</b></td>
-    <td>(sql, parameters, [Connection])
+    <td><code>(sql, parameters[], [Connection])</code>
         <br>Runs the <tt>sql</tt> query with provided <tt>parameters</tt> Array and retuns a ResultSet/affected-rows-count/last-insert-id on success.</td></tr>
 <tr><td valign="top"><b>get_row</b></td>
     <td>(sql/ResultSet)
@@ -41,8 +41,10 @@ _Cheap Tricks Library for RingoJS - Sqlite package_
         <br>Returns a <em>generator</em> on all rows from the given <tt>ResultSet</tt> or a ResultSet built with the given <tt>sql</tt> query.
         <br><em>Note: due to Sqlite recommendation to close all resultsets ASAP for better performance this is just a wrapper around <em>get_all()</em>.</td></tr>
 <tr><td valign="top"><b>get_col</b></td>
-    <td>(sql/ResultSet, [column=1])
-        <br>Retrieves an Array of all values in one column from the given <tt>ResultSet</tt> or a ResultSet built with the given <tt>sql</tt> query.</td></tr>
+    <td><!--(sql/ResultSet, [column=1])<br>-->
+        Retrieves an Array of all values in one column. Params:<!-- from the given <tt>ResultSet</tt> or a ResultSet built with the given <tt>sql</tt> query.-->
+        <ul><li><tt>sql/ResultSet</tt> - ResultSet or an SQL query String;</li>
+            <li><tt>[column=1]</tt> - Optional column number (starts from 1).</li></ul></td></tr>
 <tr><td valign="top"><b>get_one</b></td>
     <td>(sql/ResultSet)
         <br>Restrieves the first value in the first row from the given <tt>ResultSet</tt> or a ResultSet build with the given <tt>sql</tt> query.</td></tr>
