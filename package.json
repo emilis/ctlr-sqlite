@@ -1,7 +1,8 @@
 {
-    "name": "ctlr-sqlite",
-    "description": "Sqlite bindings for RingoJS.",
-    "keywords": ["sqlite", "adodb"],
+    "name":         "ctlr-sqlite",
+    "description":  "Sqlite bindings for RingoJS.",
+    "keywords":     ["sqlite", "adodb"],
+    "homepage":     "https://github.com/emilis/ctlr-sqlite",
     "version": "1.0",
     "main": "index.js",
     "directories": {
